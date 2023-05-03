@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color palette -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_smoke">#FFF8F8F8</color>
+    <color name="whisper">#FFE5E5E5</color>
+    <color name="dark_grey">#FFA3A3A3</color>
+    <color name="matterhorn">#FF535353</color>
+    <color name="night_rider">#FF333333</color>
+    <color name="black">#FF000000</color>
+
+    <color name="mountain_meadow">#FF24B788</color>
+    <color name="golden_poppy">#FFF1C102</color>
+    <color name="torch_red">#FFFF0033</color>
+
+    <!-- Theme colors -->
+    <color name="color_primary">@color/white_smoke</color>
+    <color name="color_primary_variant">@color/white_smoke</color>
+    <color name="color_on_primary">@color/night_rider</color>
+    <color name="background">@color/color_primary</color>
+    <color name="surface">@color/white</color>
+    <color name="color_on_surface">@color/matterhorn</color>
+    <color name="success_color">@color/mountain_meadow</color>
+    <color name="error_color">@color/torch_red</color>
+</resources>
