@@ -1,8 +1,8 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
     id 'androidx.navigation.safeargs'
+    id 'com.google.devtools.ksp'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -57,7 +57,7 @@ dependencies {
 
     // Dagger (dependency injection)
     implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    ksp "com.google.dagger:dagger-compiler:$dagger_version"
 
     // Retrofit (networking)
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -66,7 +66,7 @@ dependencies {
     // Room (persistence)
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    ksp "androidx.room:room-compiler:2.6.1"
 
     // GlideToVectorYou (image loading)
     implementation 'com.github.2coffees1team:GlideToVectorYou:v2.0.0'
