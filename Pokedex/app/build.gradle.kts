@@ -46,11 +46,11 @@ android {
 
 dependencies {
 
-    val daggerVersion = "2.48.1"
-    val lifecycleVersion = "2.7.0"
-    val navigationVersion = "2.7.6"
-    val retrofitVersion = "2.9.0"
-    val roomVersion = "2.6.1"
+    val daggerVersion: String by rootProject.extra
+    val lifecycleVersion: String by rootProject.extra
+    val navigationVersion: String by rootProject.extra
+    val retrofitVersion: String by rootProject.extra
+    val roomVersion: String by rootProject.extra
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
