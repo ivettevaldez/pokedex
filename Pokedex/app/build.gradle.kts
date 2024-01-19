@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("androidx.navigation.safeargs")
     id("com.google.devtools.ksp")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
 }
 
 android {
@@ -46,40 +46,38 @@ android {
 
 dependencies {
 
+    val appCompatVersion: String by rootProject.extra
     val daggerVersion: String by rootProject.extra
+    val combineTupleVersion: String by rootProject.extra
+    val constraintLayoutVersion: String by rootProject.extra
+    val coreVersion: String by rootProject.extra
+    val glideToVectorYouVersion: String by rootProject.extra
     val lifecycleVersion: String by rootProject.extra
+    val materialVersion: String by rootProject.extra
     val navigationVersion: String by rootProject.extra
     val retrofitVersion: String by rootProject.extra
     val roomVersion: String by rootProject.extra
+    val swipeRefreshVersion: String by rootProject.extra
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("androidx.core:core-ktx:$coreVersion")
+    implementation("androidx.appcompat:appcompat:$appCompatVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$constraintLayoutVersion")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
     implementation("androidx.navigation:navigation-fragment-ktx:$navigationVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navigationVersion")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.android.material:material:$materialVersion")
 
-    // Dagger (dependency injection)
     implementation("com.google.dagger:dagger:$daggerVersion")
     ksp("com.google.dagger:dagger-compiler:$daggerVersion")
-
-    // Retrofit (networking)
+    implementation("com.github.2coffees1team:GlideToVectorYou:v$glideToVectorYouVersion")
+    implementation("com.github.Zhuinden:livedata-combinetuple-kt:$combineTupleVersion")
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-
-    // Room (persistence)
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
-    ksp("androidx.room:room-compiler:2.6.1")
-
-    // GlideToVectorYou (image loading)
-    implementation("com.github.2coffees1team:GlideToVectorYou:v2.0.0")
-
-    // LiveData-CombineTuple-KT (helper functions for LiveData)
-    implementation("com.github.Zhuinden:livedata-combinetuple-kt:2.0.0")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     testImplementation("androidx.arch.core:core-testing:2.2.0")
     testImplementation("androidx.test:core:1.5.0")
