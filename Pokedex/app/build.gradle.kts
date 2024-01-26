@@ -1,8 +1,8 @@
 plugins {
-    id("com.android.application")
-    id("androidx.navigation.safeargs")
-    id("com.google.devtools.ksp")
-    kotlin("android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.androidx.navigation.safeargs)
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.ksp)
 }
 
 android {

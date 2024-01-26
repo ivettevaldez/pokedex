@@ -3,12 +3,12 @@ androidGradleVersion = "8.2.2"
 appCompatVersion = "1.6.1"
 combineTupleVersion = "2.0.0"
 constraintLayoutVersion = "2.1.4"
-coreVersion = "1.12.0"
 coroutinesTestVersion = "1.7.1"
 daggerVersion = "2.48.1"
 glideToVectorYouVersion = "2.0.0"
 junitVersion = "4.13.2"
 kotlinVersion = "1.9.22"
+kotlinCoreVersion = "1.12.0"
 kspVersion = "1.9.22-1.0.16"
 lifecycleVersion = "2.7.0"
 materialVersion = "1.11.0"
@@ -27,7 +27,7 @@ testJunitVersion = "1.1.5"
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompatVersion" }
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayoutVersion" }
-androidx-core = { module = "androidx.core:core-ktx", version.ref = "coreVersion" }
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "kotlinCoreVersion" }
 androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleVersion" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationVersion" }
@@ -58,6 +58,5 @@ robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectr
 [plugins]
 androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigationVersion" }
 android-application = { id = "com.android.application", version.ref = "androidGradleVersion" }
-android-library = { id = "com.android.library", version.ref = "androidGradleVersion" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
