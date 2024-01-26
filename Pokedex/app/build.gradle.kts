@@ -61,13 +61,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.retrofit)
 
-    testImplementation(libs.androidx.test.arch.core)
-    testImplementation(libs.androidx.test.core)
-    testImplementation(libs.bundles.mockito)
-    testImplementation(libs.coroutines.test)
-    testImplementation(libs.junit)
-    testImplementation(libs.robolectric)
+    testImplementation(testlibs.androidx.arch.core)
+    testImplementation(testlibs.androidx.core)
+    testImplementation(testlibs.bundles.mockito)
+    testImplementation(testlibs.coroutines)
+    testImplementation(testlibs.junit)
+    testImplementation(testlibs.robolectric)
 
-    androidTestImplementation(libs.androidx.test.espresso)
-    androidTestImplementation(libs.androidx.test.junit)
+    androidTestImplementation(testlibs.androidx.espresso)
+    androidTestImplementation(testlibs.androidx.junit)
 }

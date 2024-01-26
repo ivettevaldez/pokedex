@@ -3,26 +3,17 @@ androidGradleVersion = "8.2.2"
 appCompatVersion = "1.6.1"
 combineTupleVersion = "2.0.0"
 constraintLayoutVersion = "2.1.4"
-coroutinesTestVersion = "1.7.1"
 daggerVersion = "2.48.1"
 glideToVectorYouVersion = "2.0.0"
-junitVersion = "4.13.2"
 kotlinVersion = "1.9.22"
 kotlinCoreVersion = "1.12.0"
 kspVersion = "1.9.22-1.0.16"
 lifecycleVersion = "2.7.0"
 materialVersion = "1.11.0"
-mockitoCoreVersion = "4.5.1"
-mockitoKotlinVersion = "4.1.0"
 navigationVersion = "2.7.6"
 retrofitVersion = "2.9.0"
-robolectricVersion = "4.7.3"
 roomVersion = "2.6.1"
 swipeRefreshVersion = "1.1.0"
-testArchCoreVersion = "2.2.0"
-testCoreVersion = "1.5.0"
-testEspressoVersion = "3.5.1"
-testJunitVersion = "1.1.5"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompatVersion" }
@@ -36,29 +27,19 @@ androidx-room = { module = "androidx.room:room-ktx", version.ref = "roomVersion"
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
 androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swipeRefreshVersion" }
-androidx-test-arch-core = { module = "androidx.arch.core:core-testing", version.ref = "testArchCoreVersion" }
-androidx-test-core = { module = "androidx.test:core", version.ref = "testCoreVersion" }
-androidx-test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "testEspressoVersion" }
-androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "testJunitVersion" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion" }
-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTestVersion" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "daggerVersion" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerVersion" }
 glidetovectoryou = { module = "com.github.2coffees1team:GlideToVectorYou", version.ref = "glideToVectorYouVersion" }
-junit = { module = "junit:junit", version.ref = "junitVersion" }
 livedata-combinetuple = { module = "com.github.Zhuinden:livedata-combinetuple-kt", version.ref = "combineTupleVersion" }
 material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
-mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCoreVersion" }
-mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlinVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
-robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectricVersion" }
 
 [bundles]
 androidx-layouts = ["androidx-constraintlayout", "androidx-swiperefreshlayout"]
 androidx-lifecycle = ["androidx-lifecycle-livedata", "androidx-lifecycle-viewmodel"]
 androidx-navigation = ["androidx-navigation-ui", "androidx-navigation-fragment"]
 androidx-room = ["androidx-room", "androidx-room-runtime"]
-mockito = ["mockito-core", "mockito-kotlin"]
 
 [plugins]
 androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigationVersion" }

@@ -12,6 +12,11 @@ dependencyResolutionManagement {
         mavenCentral()
         maven("https://jitpack.io")
     }
+    versionCatalogs {
+        create("testlibs") {
+            from(files("gradle/testlibs.versions.toml"))
+        }
+    }
 }
 rootProject.name = "Pokedex"
 include(":app")
