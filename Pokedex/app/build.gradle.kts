@@ -46,47 +46,34 @@ android {
 
 dependencies {
 
-    val appCompatVersion: String by rootProject.extra
-    val daggerVersion: String by rootProject.extra
-    val combineTupleVersion: String by rootProject.extra
-    val constraintLayoutVersion: String by rootProject.extra
-    val coreVersion: String by rootProject.extra
-    val glideToVectorYouVersion: String by rootProject.extra
-    val lifecycleVersion: String by rootProject.extra
-    val materialVersion: String by rootProject.extra
-    val navigationVersion: String by rootProject.extra
-    val retrofitVersion: String by rootProject.extra
-    val roomVersion: String by rootProject.extra
-    val swipeRefreshVersion: String by rootProject.extra
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.converter.gson)
+    implementation(libs.dagger)
+    ksp(libs.dagger.compiler)
+    implementation(libs.glidetovectoryou)
+    implementation(libs.livedata.combinetuple)
+    implementation(libs.material)
+    implementation(libs.retrofit)
 
-    implementation("androidx.core:core-ktx:$coreVersion")
-    implementation("androidx.appcompat:appcompat:$appCompatVersion")
-    implementation("androidx.constraintlayout:constraintlayout:$constraintLayoutVersion")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshVersion")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
-    implementation("androidx.navigation:navigation-fragment-ktx:$navigationVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navigationVersion")
-    implementation("com.google.android.material:material:$materialVersion")
+    // Testing
+    testImplementation(libs.androidx.test.arch.core)
+    testImplementation(libs.androidx.test.core)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.robolectric)
 
-    implementation("com.google.dagger:dagger:$daggerVersion")
-    ksp("com.google.dagger:dagger-compiler:$daggerVersion")
-    implementation("com.github.2coffees1team:GlideToVectorYou:v$glideToVectorYouVersion")
-    implementation("com.github.Zhuinden:livedata-combinetuple-kt:$combineTupleVersion")
-    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
-    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-    implementation("androidx.room:room-runtime:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
-    ksp("androidx.room:room-compiler:$roomVersion")
-
-    testImplementation("androidx.arch.core:core-testing:2.2.0")
-    testImplementation("androidx.test:core:1.5.0")
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
-    testImplementation("org.mockito:mockito-core:4.5.1")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
-    testImplementation("org.robolectric:robolectric:4.7.3")
-
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(libs.androidx.test.espresso)
+    androidTestImplementation(libs.androidx.test.junit)
 }
