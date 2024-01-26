@@ -48,14 +48,10 @@ dependencies {
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.swiperefreshlayout)
-    implementation(libs.androidx.lifecycle.livedata)
-    implementation(libs.androidx.lifecycle.viewmodel)
-    implementation(libs.androidx.navigation.fragment)
-    implementation(libs.androidx.navigation.ui)
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room)
+    implementation(libs.bundles.androidx.layouts)
+    implementation(libs.bundles.androidx.lifecycle)
+    implementation(libs.bundles.androidx.navigation)
+    implementation(libs.bundles.androidx.room)
     ksp(libs.androidx.room.compiler)
     implementation(libs.converter.gson)
     implementation(libs.dagger)
@@ -65,13 +61,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.retrofit)
 
-    // Testing
     testImplementation(libs.androidx.test.arch.core)
     testImplementation(libs.androidx.test.core)
+    testImplementation(libs.bundles.mockito)
     testImplementation(libs.coroutines.test)
     testImplementation(libs.junit)
-    testImplementation(libs.mockito.core)
-    testImplementation(libs.mockito.kotlin)
     testImplementation(libs.robolectric)
 
     androidTestImplementation(libs.androidx.test.espresso)

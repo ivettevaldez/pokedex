@@ -54,6 +54,11 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectricVersion" }
 
 [bundles]
+androidx-layouts = ["androidx-constraintlayout", "androidx-swiperefreshlayout"]
+androidx-lifecycle = ["androidx-lifecycle-livedata", "androidx-lifecycle-viewmodel"]
+androidx-navigation = ["androidx-navigation-ui", "androidx-navigation-fragment"]
+androidx-room = ["androidx-room", "androidx-room-runtime"]
+mockito = ["mockito-core", "mockito-kotlin"]
 
 [plugins]
 androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigationVersion" }
